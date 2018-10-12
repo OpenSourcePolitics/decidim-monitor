@@ -4,7 +4,7 @@ services:
     build:
       context: .
       args:
-        - MIX_ENV=dev
+        - MIX_ENV=prod
     volumes:
       - .:/code:delegated
       - node_modules:/code/frontend/node_modules:delegated
@@ -13,6 +13,6 @@ services:
     entrypoint: ""
     command: mix phx.server
     environment: 
-      MIX_ENV: dev
+      MIX_ENV: prod
 volumes:
   node_modules:
